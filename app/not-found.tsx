@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { Home, AlertCircle } from 'lucide-react';
 
 /**
@@ -28,20 +27,13 @@ export default function NotFound() {
           
           {/* Action Buttons */}
           <div className="space-y-3">
-            <Link href="/" className="block">
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                <Home className="w-4 h-4 mr-2" />
-                Go to Homepage
-              </Button>
-            </Link>
-            
-            <Button 
-              variant="outline" 
-              className="w-full"
-              onClick={() => window.history.back()}
+            <Link 
+              href="/" 
+              className="inline-flex items-center justify-center w-full h-10 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition-colors"
             >
-              Go Back
-            </Button>
+              <Home className="w-4 h-4 mr-2" />
+              Go to Homepage
+            </Link>
           </div>
           
           {/* Additional Help */}
